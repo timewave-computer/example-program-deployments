@@ -19,12 +19,12 @@
 **/.editorconfig
 
 # manager configs
-manager_configs/**
+# manager_configs/**
 
 # ignore programs except the template
 # Remove if you want to save them to your github
-programs/**
-!programs/program_template
+# programs/**
+# !programs/program_template
 
 # program outputs
 # Remove if you want to save them to your github
