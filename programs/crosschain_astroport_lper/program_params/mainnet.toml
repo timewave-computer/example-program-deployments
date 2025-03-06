@@ -1,0 +1,8 @@
+owner="neutron14wey3cpz2cxswu9u6gaalz2xxh03xdeyqal9cf"
+pool_addr="neutron145z3nj7yqft2vpugr5a5p7jsnagvms90tvtej45g4s0xkqalhy7sj20vgz"
+ntrn_on_neutron="untrn"
+atom_on_neutron="ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+atom_on_juno="ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+permissioned_withdrawer="neutron14wey3cpz2cxswu9u6gaalz2xxh03xdeyqal9cf"
+juno_gaia_ibc_channel_id="channel-207"
+gaia_neutron_ibc_channel_id="channel-569"
