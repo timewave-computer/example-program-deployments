@@ -1,10 +1,12 @@
-# Program deployer
+# Examples of Valence Programs being deployed
 
-This is a CLI tool to deploy programs using the manager on different environments
+This repository contains simple example programs and tooling to demonstrate how to build and deploy programs using Valence's suite of tools.
 
-It will allow you to use rust to build your program config for deployment, but also allow you to provide a program config in json format.
+## Included Examples
 
-# How to
+1. **[Astroport Liquidity Deployer](programs/astroport_lper)**: Demonstrates a simple program to provide liquidity to and withdraw liquidity from a pool on Astroport.
+
+# How to build and deploy a Program 
 
 ## .env
 
@@ -35,7 +37,7 @@ Any parameter that is included there will be available in the program builder fu
 
 ## Run the script
 
-You can run your program using the following command:
+You can deploy your program using the following command:
 
 ```bash
 cargo run -p *PROGRAM_NAME*
