@@ -411,6 +411,45 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7c02d123df017efcdfbd739ef81735b36c5ba83ec3c59c80a9d7ecc718f92e50"
 
 [[package]]
+name = "astroport_lper"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "deployer-lib",
+ "serde_json",
+ "tokio",
+ "valence-account-utils",
+ "valence-astroport-lper",
+ "valence-astroport-utils",
+ "valence-astroport-withdrawer",
+ "valence-authorization",
+ "valence-authorization-utils",
+ "valence-base-account",
+ "valence-drop-liquid-staker",
+ "valence-encoder-broker",
+ "valence-forwarder-library",
+ "valence-generic-ibc-transfer-library",
+ "valence-ibc-utils",
+ "valence-library-base",
+ "valence-library-utils",
+ "valence-macros",
+ "valence-neutron-ibc-transfer-library",
+ "valence-neutron-ic-querier",
+ "valence-osmosis-cl-lper",
+ "valence-osmosis-cl-withdrawer",
+ "valence-osmosis-gamm-lper",
+ "valence-osmosis-gamm-withdrawer",
+ "valence-osmosis-utils",
+ "valence-processor",
+ "valence-processor-utils",
+ "valence-program-manager",
+ "valence-program-registry",
+ "valence-reverse-splitter-library",
+ "valence-splitter-library",
+ "valence-storage-account",
+]
+
+[[package]]
 name = "async-stream"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4818,7 +4857,7 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 [[package]]
 name = "valence-account-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4833,7 +4872,7 @@ dependencies = [
 [[package]]
 name = "valence-astroport-lper"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4847,7 +4886,7 @@ dependencies = [
 [[package]]
 name = "valence-astroport-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4857,7 +4896,7 @@ dependencies = [
 [[package]]
 name = "valence-astroport-withdrawer"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4872,7 +4911,7 @@ dependencies = [
 [[package]]
 name = "valence-authorization"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmos-sdk-proto 0.20.0",
  "cosmwasm-schema 2.2.1",
@@ -4894,7 +4933,7 @@ dependencies = [
 [[package]]
 name = "valence-authorization-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4908,7 +4947,7 @@ dependencies = [
 [[package]]
 name = "valence-base-account"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4924,7 +4963,7 @@ dependencies = [
 [[package]]
 name = "valence-drop-liquid-staker"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4942,7 +4981,7 @@ dependencies = [
 [[package]]
 name = "valence-drop-liquid-unstaker"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4962,7 +5001,7 @@ dependencies = [
 [[package]]
 name = "valence-encoder-broker"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -4976,7 +5015,7 @@ dependencies = [
 [[package]]
 name = "valence-encoder-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "alloy-sol-types",
  "cosmwasm-schema 2.2.1",
@@ -4987,7 +5026,7 @@ dependencies = [
 [[package]]
 name = "valence-forwarder-library"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5006,7 +5045,7 @@ dependencies = [
 [[package]]
 name = "valence-generic-ibc-transfer-library"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5026,7 +5065,7 @@ dependencies = [
 [[package]]
 name = "valence-gmp-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5035,7 +5074,7 @@ dependencies = [
 [[package]]
 name = "valence-ibc-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmos-sdk-proto 0.20.0",
  "cosmwasm-schema 2.2.1",
@@ -5049,7 +5088,7 @@ dependencies = [
 [[package]]
 name = "valence-library-base"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5066,7 +5105,7 @@ dependencies = [
 [[package]]
 name = "valence-library-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5084,7 +5123,7 @@ dependencies = [
 [[package]]
 name = "valence-liquid-staking-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5093,7 +5132,7 @@ dependencies = [
 [[package]]
 name = "valence-macros"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5105,7 +5144,7 @@ dependencies = [
 [[package]]
 name = "valence-middleware-broker"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5125,7 +5164,7 @@ dependencies = [
 [[package]]
 name = "valence-middleware-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5138,7 +5177,7 @@ dependencies = [
 [[package]]
 name = "valence-neutron-ibc-transfer-library"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5160,7 +5199,7 @@ dependencies = [
 [[package]]
 name = "valence-neutron-ic-querier"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5180,7 +5219,7 @@ dependencies = [
 [[package]]
 name = "valence-osmosis-cl-lper"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5202,7 +5241,7 @@ dependencies = [
 [[package]]
 name = "valence-osmosis-cl-withdrawer"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5224,7 +5263,7 @@ dependencies = [
 [[package]]
 name = "valence-osmosis-gamm-lper"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5240,7 +5279,7 @@ dependencies = [
 [[package]]
 name = "valence-osmosis-gamm-withdrawer"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5256,7 +5295,7 @@ dependencies = [
 [[package]]
 name = "valence-osmosis-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5268,7 +5307,7 @@ dependencies = [
 [[package]]
 name = "valence-processor"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5285,7 +5324,7 @@ dependencies = [
 [[package]]
 name = "valence-processor-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5300,7 +5339,7 @@ dependencies = [
 [[package]]
 name = "valence-program-manager"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "aho-corasick",
  "anyhow",
@@ -5359,7 +5398,7 @@ dependencies = [
 [[package]]
 name = "valence-program-registry"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5375,11 +5414,10 @@ dependencies = [
 [[package]]
 name = "valence-program-registry-utils"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
- "cw-ownable",
  "serde",
  "serde_json",
 ]
@@ -5387,7 +5425,7 @@ dependencies = [
 [[package]]
 name = "valence-reverse-splitter-library"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5406,7 +5444,7 @@ dependencies = [
 [[package]]
 name = "valence-splitter-library"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
@@ -5426,7 +5464,7 @@ dependencies = [
 [[package]]
 name = "valence-storage-account"
 version = "0.2.0"
-source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#fee205b7bc99f74c440c119b717ecde944efb648"
+source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#ea55e8c8a7cf9132d81ff8b74aa2d0b1473cd279"
 dependencies = [
  "cosmwasm-schema 2.2.1",
  "cosmwasm-std 2.2.1",
