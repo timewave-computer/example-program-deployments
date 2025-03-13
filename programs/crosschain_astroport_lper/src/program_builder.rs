@@ -3,7 +3,7 @@ use std::collections::BTreeMap;
 use valence_authorization_utils::{
     authorization::{ AuthorizationModeInfo, PermissionTypeInfo },
     authorization_message::{ Message, MessageDetails, MessageType, ParamRestriction },
-    builders::{ AtomicFunctionBuilder, AtomicSubroutineBuilder, AuthorizationBuilder },
+    builders::{ AtomicFunctionBuilder, AtomicSubroutineBuilder, AuthorizationBuilder }, domain::Domain,
 };
 use valence_generic_ibc_transfer_library::msg::{IbcTransferAmount, RemoteChainInfo};
 use valence_ibc_utils::types::PacketForwardMiddlewareConfig;
@@ -16,7 +16,7 @@ use valence_program_manager::{
 use valence_astroport_utils::PoolType;
 use valence_astroport_lper::msg::LiquidityProviderConfig;
 use valence_astroport_withdrawer::msg::LiquidityWithdrawerConfig;
-use valence_library_utils::{liquidity_utils::AssetData, GetId};
+use valence_library_utils::liquidity_utils::AssetData;
 
 /// Write your program using the program builder
 pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
@@ -55,12 +55,11 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
         AccountInfo::new("withdraw_output_account".to_string(), &neutron_domain, AccountType::default())
     );
 
-
     let mut juno_to_neutron_pfm_map:BTreeMap<String, PacketForwardMiddlewareConfig> = BTreeMap::new();
     juno_to_neutron_pfm_map.insert(atom_on_juno.clone(),PacketForwardMiddlewareConfig {
         local_to_hop_chain_channel_id: juno_gaia_ibc_channel_id.to_string(),
         hop_to_destination_chain_channel_id: gaia_neutron_ibc_channel_id.to_string(),
-        hop_chain_receiver_address: format!("|account_id|:{}", neutron_input_account.get_account_id()), // assign unknown address
+        hop_chain_receiver_address: "invalid-pfm".to_string(), // necessary so entire transaction is reverted 
      });
 
     // Libraries
@@ -76,7 +75,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
                     amount: IbcTransferAmount::FullAmount,
                     remote_chain_info: RemoteChainInfo {
                         channel_id: juno_gaia_ibc_channel_id.to_string(),
-                        ibc_transfer_timeout: Some(600u64.into()),
+                        ibc_transfer_timeout: Some(600u64.into()), // 10 mins
                     },
                     denom_to_pfm_map:  juno_to_neutron_pfm_map,
                     memo: "".to_owned(),
@@ -133,36 +132,82 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     builder.add_link(&astroport_lper_library, vec![&neutron_input_account], vec![&liquidity_position_account]);
     builder.add_link(&astroport_withdrawer_library, vec![&liquidity_position_account], vec![&withdraw_output_account]);
 
-    // TODO: add subroutine for transfer.
-    // TODO: move subroutines into variables
+
 
     // authorizations
+    let ibc_transfer_subroutine = AtomicSubroutineBuilder::new()
+    .with_function(AtomicFunctionBuilder::new()
+    // NOTE: for crosschain domains, this must be added
+    .with_domain(Domain::External("juno".to_string()))
+    .with_contract_address(juno_ibc_transfer_library.clone())
+    .with_message_details(MessageDetails {
+        message_type: MessageType::CosmwasmExecuteMsg,
+        message: Message {
+            name: "process_function".to_string(),
+            params_restrictions: Some(
+                vec![
+                    ParamRestriction::MustBeIncluded(
+                        vec!["process_function".to_string(), "ibc_transfer".to_string()]
+                    )
+                ]
+            )
+        }
+    }).build());
     builder.add_authorization(
         AuthorizationBuilder::new()
-            .with_label("provide_liquidity")
+            .with_label("juno_neutron_ibc_transfer")
             .with_subroutine(
-                AtomicSubroutineBuilder::new().with_function(AtomicFunctionBuilder::new()
-                .with_contract_address(astroport_withdrawer_library.clone())
-                .with_message_details(MessageDetails {
-                    message_type: MessageType::CosmwasmExecuteMsg,
-                    message: Message {
-                        name: "process_function".to_string(),
-                        params_restrictions: Some(
-                            vec![
-                                ParamRestriction::MustBeIncluded(
-                                    vec![
-                                        "process_function".to_string(),
-                                        "provide_double_sided_liquidity".to_string()
-                                    ]
-                                )
-                            ]
-                        ),
-                    },
-                })
-                .build()).build()
+              ibc_transfer_subroutine.build()
             )
             .build()
     );
+
+    let provide_liquidity_subroutine=   AtomicSubroutineBuilder::new().with_function(AtomicFunctionBuilder::new()
+    .with_contract_address(astroport_withdrawer_library.clone())
+    .with_message_details(MessageDetails {
+        message_type: MessageType::CosmwasmExecuteMsg,
+        message: Message {
+            name: "process_function".to_string(),
+            params_restrictions: Some(
+                vec![
+                    ParamRestriction::MustBeIncluded(
+                        vec![
+                            "process_function".to_string(),
+                            "provide_double_sided_liquidity".to_string()
+                        ]
+                    )
+                ]
+            ),
+        },
+    })
+    .build());
+
+    builder.add_authorization(
+    AuthorizationBuilder::new()
+        .with_label("provide_liquidity")
+        .with_subroutine(
+          provide_liquidity_subroutine.build()
+        )
+        .build()
+    );
+
+    let withdraw_liquidity_subroutine = AtomicSubroutineBuilder::new().with_function(AtomicFunctionBuilder::new()
+    .with_contract_address(astroport_withdrawer_library.clone())
+    .with_message_details(MessageDetails {
+        message_type: MessageType::CosmwasmExecuteMsg,
+        message: Message {
+            name: "process_function".to_string(),
+            params_restrictions: Some(
+                vec![
+                    ParamRestriction::MustBeIncluded(
+                        vec!["process_function".to_string(), "withdraw_liquidity".to_string()]
+                    )
+                ]
+            ),
+        },
+    })
+    .build());
+
     builder.add_authorization(
         AuthorizationBuilder::new()
             .with_mode(
@@ -172,22 +217,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
             )
             .with_label("withdraw_liquidity")
             .with_subroutine(
-                AtomicSubroutineBuilder::new().with_function(AtomicFunctionBuilder::new()
-                .with_contract_address(astroport_withdrawer_library.clone())
-                .with_message_details(MessageDetails {
-                    message_type: MessageType::CosmwasmExecuteMsg,
-                    message: Message {
-                        name: "process_function".to_string(),
-                        params_restrictions: Some(
-                            vec![
-                                ParamRestriction::MustBeIncluded(
-                                    vec!["process_function".to_string(), "withdraw_liquidity".to_string()]
-                                )
-                            ]
-                        ),
-                    },
-                })
-                .build()).build()
+                    withdraw_liquidity_subroutine.build()
             )
             .build()
     );

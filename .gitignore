@@ -30,3 +30,5 @@
 # Remove if you want to save them to your github
 programs/**/output/*
 !programs/**/output/README.md
+
+*scratch*
