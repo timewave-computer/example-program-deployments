@@ -13,10 +13,21 @@ serde_json              = { workspace = true }
 clap                    = { workspace = true }
 tokio                   = { workspace = true }
 
+<<<<<<< HEAD
 # Libraries
 valence-authorization                = { workspace = true }
 valence-base-account                 = { workspace = true }
 valence-storage-account              = { workspace = true }
+=======
+# CW
+cosmwasm-std = { workspace = true }
+cw-utils     = { workspace = true }
+cw-denom     = { workspace = true }
+
+# Libraries
+valence-authorization                = { workspace = true }
+valence-base-account                 = { workspace = true }
+>>>>>>> template/main
 valence-processor                    = { workspace = true }
 valence-splitter-library             = { workspace = true }
 valence-astroport-lper               = { workspace = true }
@@ -29,9 +40,12 @@ valence-osmosis-gamm-lper            = { workspace = true }
 valence-osmosis-gamm-withdrawer      = { workspace = true }
 valence-osmosis-cl-lper              = { workspace = true }
 valence-osmosis-cl-withdrawer        = { workspace = true }
+<<<<<<< HEAD
 valence-encoder-broker               = { workspace = true }
 valence-neutron-ic-querier           = { workspace = true }
 valence-drop-liquid-staker           = { workspace = true }
+=======
+>>>>>>> template/main
 valence-program-registry             = { workspace = true }
 
 # utils

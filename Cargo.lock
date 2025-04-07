@@ -23,7 +23,7 @@ version = "0.7.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "891477e0c6a8957309ee5c45a6368af3ae14bb510732d2684ffa19af310920f9"
 dependencies = [
- "getrandom 0.2.15",
+ "getrandom",
  "once_cell",
  "version_check",
 ]
@@ -56,6 +56,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
 
 [[package]]
+<<<<<<< HEAD
 name = "alloy-primitives"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -147,6 +148,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "android-tzdata"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -224,9 +227,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c775f0d12169cba7aae4caeb547bb6a50781c7449a8aa53793827c9ec4abf488"
 dependencies = [
  "ark-ec",
+<<<<<<< HEAD
  "ark-ff 0.4.2",
  "ark-serialize 0.4.2",
  "ark-std 0.4.0",
+=======
+ "ark-ff",
+ "ark-serialize",
+ "ark-std",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -235,10 +244,17 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "defd9a439d56ac24968cca0571f598a61bc8c55f71d50a89cda591cb750670ba"
 dependencies = [
+<<<<<<< HEAD
  "ark-ff 0.4.2",
  "ark-poly",
  "ark-serialize 0.4.2",
  "ark-std 0.4.0",
+=======
+ "ark-ff",
+ "ark-poly",
+ "ark-serialize",
+ "ark-std",
+>>>>>>> template/main
  "derivative",
  "hashbrown 0.13.2",
  "itertools 0.10.5",
@@ -249,6 +265,7 @@ dependencies = [
 
 [[package]]
 name = "ark-ff"
+<<<<<<< HEAD
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6b3235cc41ee7a12aaaf2c575a2ad7b46713a8a50bda2fc3b003a04845c05dd6"
@@ -267,14 +284,23 @@ dependencies = [
 
 [[package]]
 name = "ark-ff"
+=======
+>>>>>>> template/main
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec847af850f44ad29048935519032c33da8aa03340876d351dfab5660d2966ba"
 dependencies = [
+<<<<<<< HEAD
  "ark-ff-asm 0.4.2",
  "ark-ff-macros 0.4.2",
  "ark-serialize 0.4.2",
  "ark-std 0.4.0",
+=======
+ "ark-ff-asm",
+ "ark-ff-macros",
+ "ark-serialize",
+ "ark-std",
+>>>>>>> template/main
  "derivative",
  "digest 0.10.7",
  "itertools 0.10.5",
@@ -282,12 +308,17 @@ dependencies = [
  "num-traits",
  "paste",
  "rayon",
+<<<<<<< HEAD
  "rustc_version 0.4.1",
+=======
+ "rustc_version",
+>>>>>>> template/main
  "zeroize",
 ]
 
 [[package]]
 name = "ark-ff-asm"
+<<<<<<< HEAD
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db02d390bf6643fb404d3d22d31aee1c4bc4459600aef9113833d17e786c6e44"
@@ -298,6 +329,8 @@ dependencies = [
 
 [[package]]
 name = "ark-ff-asm"
+=======
+>>>>>>> template/main
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3ed4aa4fe255d0bc6d79373f7e31d2ea147bcf486cba1be5ba7ea85abdb92348"
@@ -308,6 +341,7 @@ dependencies = [
 
 [[package]]
 name = "ark-ff-macros"
+<<<<<<< HEAD
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db2fd794a08ccb318058009eefdf15bcaaaaf6f8161eb3345f907222bac38b20"
@@ -320,6 +354,8 @@ dependencies = [
 
 [[package]]
 name = "ark-ff-macros"
+=======
+>>>>>>> template/main
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7abe79b0e4288889c4574159ab790824d0033b9fdcb2a112a3182fac2e514565"
@@ -337,15 +373,22 @@ version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d320bfc44ee185d899ccbadfa8bc31aab923ce1558716e1997a1e74057fe86bf"
 dependencies = [
+<<<<<<< HEAD
  "ark-ff 0.4.2",
  "ark-serialize 0.4.2",
  "ark-std 0.4.0",
+=======
+ "ark-ff",
+ "ark-serialize",
+ "ark-std",
+>>>>>>> template/main
  "derivative",
  "hashbrown 0.13.2",
 ]
 
 [[package]]
 name = "ark-serialize"
+<<<<<<< HEAD
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d6c2b318ee6e10f8c2853e73a83adc0ccb88995aa978d8a3408d492ab2ee671"
@@ -356,12 +399,18 @@ dependencies = [
 
 [[package]]
 name = "ark-serialize"
+=======
+>>>>>>> template/main
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "adb7b85a02b83d2f22f89bd5cac66c9c89474240cb6207cb1efc16d098e822a5"
 dependencies = [
  "ark-serialize-derive",
+<<<<<<< HEAD
  "ark-std 0.4.0",
+=======
+ "ark-std",
+>>>>>>> template/main
  "digest 0.10.7",
  "num-bigint",
 ]
@@ -379,6 +428,7 @@ dependencies = [
 
 [[package]]
 name = "ark-std"
+<<<<<<< HEAD
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1df2c09229cbc5a028b1d70e00fdb2acee28b1055dfb5ca73eea49c5a25c4e7c"
@@ -389,6 +439,8 @@ dependencies = [
 
 [[package]]
 name = "ark-std"
+=======
+>>>>>>> template/main
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "94893f1e0c6eeab764ade8dc4c0db24caf4fe7cbbaafc0eba0a9030f447b5185"
@@ -405,6 +457,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d902e3d592a523def97af8f317b08ce16b7ab854c1985a0c671e6f15cebc236"
 
 [[package]]
+<<<<<<< HEAD
 name = "arrayvec"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -450,6 +503,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "async-stream"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -483,6 +538,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "auto_impl"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -494,6 +550,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "autocfg"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -626,6 +684,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "bit-set"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -641,6 +700,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "bitcoin-internals"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -672,6 +733,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "bitvec"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -684,6 +746,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "block-buffer"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -729,12 +793,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1628fb46dfa0b37568d12e5edd512553eccf6a22a78e8bde00bb4aed84d5bdbf"
 
 [[package]]
+<<<<<<< HEAD
 name = "byte-slice-cast"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7575182f7272186991736b70173b0ea045398f984bf5ebbb3804736ce1330c9d"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "byteorder"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -751,9 +818,15 @@ dependencies = [
 
 [[package]]
 name = "cc"
+<<<<<<< HEAD
 version = "1.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "525046617d8376e3db1deffb079e91cef90a89fc3ca5c185bbf8c9ecdd15cd5c"
+=======
+version = "1.2.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be714c154be609ec7f5dad223a33bf1482fff90472de28f7362806e6d4832b8c"
+>>>>>>> template/main
 dependencies = [
  "shlex",
 ]
@@ -780,9 +853,15 @@ dependencies = [
 
 [[package]]
 name = "clap"
+<<<<<<< HEAD
 version = "4.5.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d8aa86934b44c19c50f87cc2790e19f54f7a67aedb64101c2e1a2e5ecfb73944"
+=======
+version = "4.5.32"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6088f3ae8c3608d19260cd7445411865a485688711b78b5be70d78cd96136f83"
+>>>>>>> template/main
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -790,9 +869,15 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
+<<<<<<< HEAD
 version = "4.5.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2414dbb2dd0695280da6ea9261e327479e9d37b0630f6b53ba2a11c60c679fd9"
+=======
+version = "4.5.32"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "22a7ef7f676155edfb82daa97f99441f3ebf4a58d5e32f295a56259f1b6facc8"
+>>>>>>> template/main
 dependencies = [
  "anstream",
  "anstyle",
@@ -866,7 +951,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68578f196d2a33ff61b27fae256c3164f65e36382648e30666dde05b8cc9dfdf"
 dependencies = [
  "async-trait",
+<<<<<<< HEAD
  "convert_case 0.6.0",
+=======
+ "convert_case",
+>>>>>>> template/main
  "json5",
  "nom",
  "pathdiff",
@@ -885,7 +974,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "595aae20e65c3be792d05818e8c63025294ac3cb7e200f11459063a352a6ef80"
 dependencies = [
  "async-trait",
+<<<<<<< HEAD
  "convert_case 0.6.0",
+=======
+ "convert_case",
+>>>>>>> template/main
  "json5",
  "pathdiff",
  "ron",
@@ -894,6 +987,7 @@ dependencies = [
  "serde_json",
  "toml",
  "winnow",
+<<<<<<< HEAD
  "yaml-rust2 0.10.1",
 ]
 
@@ -908,6 +1002,9 @@ dependencies = [
  "hex",
  "proptest",
  "serde",
+=======
+ "yaml-rust2 0.10.0",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -931,12 +1028,17 @@ version = "0.1.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9d839f2a20b0aee515dc581a6172f2321f96cab76c1a38a4c584a194955390e"
 dependencies = [
+<<<<<<< HEAD
  "getrandom 0.2.15",
+=======
+ "getrandom",
+>>>>>>> template/main
  "once_cell",
  "tiny-keccak 2.0.2",
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "const_format"
 version = "0.2.34"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -963,6 +1065,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6245d59a3e82a7fc217c5828a6692dbc6dfb63a0c8c90495621f7b9d79704a0e"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "convert_case"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1073,8 +1177,13 @@ checksum = "aa2f53285517db3e33d825b3e46301efe845135778527e1295154413b2f0469e"
 dependencies = [
  "ark-bls12-381",
  "ark-ec",
+<<<<<<< HEAD
  "ark-ff 0.4.2",
  "ark-serialize 0.4.2",
+=======
+ "ark-ff",
+ "ark-serialize",
+>>>>>>> template/main
  "cosmwasm-core",
  "curve25519-dalek 4.1.3",
  "digest 0.10.7",
@@ -1191,7 +1300,11 @@ dependencies = [
  "cosmwasm-core",
  "cosmwasm-crypto 2.2.2",
  "cosmwasm-derive 2.2.2",
+<<<<<<< HEAD
  "derive_more 1.0.0",
+=======
+ "derive_more",
+>>>>>>> template/main
  "hex",
  "rand_core 0.6.4",
  "rmp-serde",
@@ -1238,6 +1351,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28"
 
 [[package]]
+<<<<<<< HEAD
 name = "crosschain_astroport_lper"
 version = "0.1.0"
 dependencies = [
@@ -1277,6 +1391,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "crunchy"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1328,7 +1444,11 @@ dependencies = [
  "curve25519-dalek-derive",
  "digest 0.10.7",
  "fiat-crypto",
+<<<<<<< HEAD
  "rustc_version 0.4.1",
+=======
+ "rustc_version",
+>>>>>>> template/main
  "subtle",
  "zeroize",
 ]
@@ -1387,8 +1507,13 @@ dependencies = [
  "cosmwasm-std 2.2.2",
  "cw-address-like",
  "cw-ownable-derive",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "thiserror 1.0.69",
 ]
 
@@ -1405,6 +1530,7 @@ dependencies = [
 
 [[package]]
 name = "cw-storage-plus"
+<<<<<<< HEAD
 version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d9b6f91c0b94481a3e9ef1ceb183c37d00764f8751e39b45fc09f4d9b970d469"
@@ -1416,6 +1542,8 @@ dependencies = [
 
 [[package]]
 name = "cw-storage-plus"
+=======
+>>>>>>> template/main
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f13360e9007f51998d42b1bc6b7fa0141f74feae61ed5fd1e5b0a89eec7b5de1"
@@ -1427,6 +1555,7 @@ dependencies = [
 
 [[package]]
 name = "cw-utils"
+<<<<<<< HEAD
 version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d6a84c6c1c0acc3616398eba50783934bd6c964bad6974241eaee3460c8f5b26"
@@ -1442,6 +1571,8 @@ dependencies = [
 
 [[package]]
 name = "cw-utils"
+=======
+>>>>>>> template/main
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "07dfee7f12f802431a856984a32bce1cb7da1e6c006b5409e3981035ce562dec"
@@ -1455,6 +1586,7 @@ dependencies = [
 
 [[package]]
 name = "cw2"
+<<<<<<< HEAD
 version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "91398113b806f4d2a8d5f8d05684704a20ffd5968bf87e3473e1973710b884ad"
@@ -1468,15 +1600,23 @@ dependencies = [
 
 [[package]]
 name = "cw2"
+=======
+>>>>>>> template/main
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b04852cd38f044c0751259d5f78255d07590d136b8a86d4e09efdd7666bd6d27"
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "schemars",
  "semver 1.0.26",
+=======
+ "cw-storage-plus",
+ "schemars",
+ "semver",
+>>>>>>> template/main
  "serde",
  "thiserror 1.0.69",
 ]
@@ -1489,12 +1629,17 @@ checksum = "a42212b6bf29bbdda693743697c621894723f35d3db0d5df930be22903d0e27c"
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
+<<<<<<< HEAD
  "cw-utils 2.0.0",
+=======
+ "cw-utils",
+>>>>>>> template/main
  "schemars",
  "serde",
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "cw721"
 version = "0.16.0"
 source = "git+https://github.com/CosmWasm/cw-nfts?tag=v0.16.0#2cad1d3e15e0a34d466a0b51e02c58b82ebe5ecd"
@@ -1538,6 +1683,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "dashmap"
 version = "6.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1560,8 +1707,16 @@ dependencies = [
  "cmd_lib",
  "config 0.15.11",
  "dotenvy",
+<<<<<<< HEAD
  "glob",
  "serde_json",
+=======
+ "env_logger 0.11.7",
+ "glob",
+ "log",
+ "serde_json",
+ "valence-library-utils",
+>>>>>>> template/main
  "valence-program-manager",
 ]
 
@@ -1597,6 +1752,7 @@ dependencies = [
 
 [[package]]
 name = "derive_more"
+<<<<<<< HEAD
 version = "0.99.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3da29a38df43d6f156149c9b43ded5e018ddff2a855cf2cfd62e8cd7d079c69f"
@@ -1610,6 +1766,8 @@ dependencies = [
 
 [[package]]
 name = "derive_more"
+=======
+>>>>>>> template/main
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a9b99b9cbbe49445b21764dc0625032a89b145a2642e67603e1c936f5458d05"
@@ -1667,6 +1825,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "displaydoc"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1678,6 +1837,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "dlv-list"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1693,12 +1854,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1aaf95b3e5c8f23aa320147307562d361db0ae0d51242340f558153b4eb2439b"
 
 [[package]]
+<<<<<<< HEAD
 name = "dunce"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "92773504d58c093f6de2459af4af33faa518c13451eb8f2b5698ed3d36e7c813"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "dyn-clone"
 version = "1.0.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1841,9 +2005,15 @@ dependencies = [
 
 [[package]]
 name = "env_logger"
+<<<<<<< HEAD
 version = "0.11.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13c863f0904021b108aa8b2f55046443e6b1ebde8fd4a15c399893aae4fa069f"
+=======
+version = "0.11.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c3716d7a920fb4fac5d84e9d4bce8ceb321e9414b4409da61b07b75c1e3d0697"
+>>>>>>> template/main
 dependencies = [
  "anstream",
  "anstyle",
@@ -1859,6 +2029,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
+<<<<<<< HEAD
 name = "errno"
 version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1869,13 +2040,19 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "ethbloom"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3932e82d64d347a045208924002930dc105a138995ccdc1479d0f05f0359f17c"
 dependencies = [
  "crunchy",
+<<<<<<< HEAD
  "fixed-hash 0.3.2",
+=======
+ "fixed-hash",
+>>>>>>> template/main
  "impl-rlp",
  "impl-serde",
  "tiny-keccak 1.5.0",
@@ -1890,9 +2067,15 @@ dependencies = [
  "crunchy",
  "ethbloom",
  "ethereum-types-serialize",
+<<<<<<< HEAD
  "fixed-hash 0.3.2",
  "serde",
  "uint 0.5.0",
+=======
+ "fixed-hash",
+ "serde",
+ "uint",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -1926,6 +2109,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "fastrand"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1954,6 +2138,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "ff"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1983,6 +2169,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "fixed-hash"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1995,6 +2182,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "flex-error"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2016,6 +2205,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2"
 
 [[package]]
+<<<<<<< HEAD
 name = "form_urlencoded"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2025,6 +2215,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "forward_ref"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2037,12 +2229,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a06f77d526c1a601b7c4cdd98f54b5eaabffc14d5f2f0296febdc7f357c6d3ba"
 
 [[package]]
+<<<<<<< HEAD
 name = "funty"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6d5a32815ae3f33302d95fdcb2ce17862f8c65363dcfd29360480ba1001fc9c"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "futures"
 version = "0.3.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2150,6 +2345,7 @@ checksum = "c4567c8db10ae91089c99af84c68c38da3ec2f087c3f82960bcdbf3656b6f4d7"
 dependencies = [
  "cfg-if",
  "libc",
+<<<<<<< HEAD
  "wasi 0.11.0+wasi-snapshot-preview1",
 ]
 
@@ -2163,6 +2359,9 @@ dependencies = [
  "libc",
  "r-efi",
  "wasi 0.14.2+wasi-0.2.4",
+=======
+ "wasi",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -2212,7 +2411,11 @@ dependencies = [
  "futures-sink",
  "futures-util",
  "http",
+<<<<<<< HEAD
  "indexmap 2.9.0",
+=======
+ "indexmap 2.8.0",
+>>>>>>> template/main
  "slab",
  "tokio",
  "tokio-util",
@@ -2314,12 +2517,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "212ab92002354b4819390025006c897e8140934349e8635c9b077f47b4dcbd20"
 
 [[package]]
+<<<<<<< HEAD
 name = "hex-literal"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "hmac"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2406,15 +2612,24 @@ dependencies = [
 
 [[package]]
 name = "iana-time-zone"
+<<<<<<< HEAD
 version = "0.1.63"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b0c919e5debc312ad217002b8048a17b7d83f80703865bbfcfebb0458b0b27d8"
+=======
+version = "0.1.61"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "235e081f3925a06703c2d0117ea8b91f042756fd6e7a6e5d901e8ca1a996b220"
+>>>>>>> template/main
 dependencies = [
  "android_system_properties",
  "core-foundation-sys",
  "iana-time-zone-haiku",
  "js-sys",
+<<<<<<< HEAD
  "log",
+=======
+>>>>>>> template/main
  "wasm-bindgen",
  "windows-core",
 ]
@@ -2429,6 +2644,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "icu_collections"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2577,12 +2793,18 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "impl-rlp"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8f7a72f11830b52333f36e3b09a288333888bf54380fd0ac0790a3c31ab0f3c5"
 dependencies = [
+<<<<<<< HEAD
  "rlp 0.4.6",
+=======
+ "rlp",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -2595,6 +2817,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "impl-trait-for-tuples"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2606,6 +2829,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "indenter"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2623,9 +2848,15 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
+<<<<<<< HEAD
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cea70ddb795996207ad57735b50c5982d8844f38ba9ee5f1aedcfb708a2aa11e"
+=======
+version = "2.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3954d50fe15b02142bf25d3b8bdadb634ec3948f103d04ffe3031bc8fe9d7058"
+>>>>>>> template/main
 dependencies = [
  "equivalent",
  "hashbrown 0.15.2",
@@ -2708,9 +2939,15 @@ checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
 
 [[package]]
 name = "jiff"
+<<<<<<< HEAD
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f33145a5cbea837164362c7bd596106eb7c5198f97d1ba6f6ebb3223952e488"
+=======
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d699bc6dfc879fb1bf9bdff0d4c56f0884fc6f0d0eb0fba397a6d00cd9a6b85e"
+>>>>>>> template/main
 dependencies = [
  "jiff-static",
  "log",
@@ -2721,9 +2958,15 @@ dependencies = [
 
 [[package]]
 name = "jiff-static"
+<<<<<<< HEAD
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "43ce13c40ec6956157a3635d97a1ee2df323b263f09ea14165131289cb0f5c19"
+=======
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8d16e75759ee0aa64c57a56acbf43916987b20c77373cb7e808979e02b93c9f9"
+>>>>>>> template/main
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2775,6 +3018,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "keccak-asm"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2785,6 +3029,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "lazy_static"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2797,6 +3043,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c19937216e9d3aa9956d9bb8dfc0b0c8beb6058fc4f7a4dc4d850edf86a237d6"
 
 [[package]]
+<<<<<<< HEAD
 name = "libm"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2815,6 +3062,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "23fb14cb19457329c82206317a5663005a4d404783dc74f4252769b0d5f42856"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "lock_api"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2826,9 +3075,15 @@ dependencies = [
 
 [[package]]
 name = "log"
+<<<<<<< HEAD
 version = "0.4.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13dc2df351e3202783a1fe0d44375f7295ffb4049267b0f3018346dc122a1d94"
+=======
+version = "0.4.26"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "30bde2b3dc3671ae49d8e2e9f044c7c005836e7a023ee57cffa25ab82764bb9e"
+>>>>>>> template/main
 
 [[package]]
 name = "matchit"
@@ -2856,9 +3111,15 @@ checksum = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a"
 
 [[package]]
 name = "miniz_oxide"
+<<<<<<< HEAD
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff70ce3e48ae43fa075863cef62e8b43b71a4f2382229920e0df362592919430"
+=======
+version = "0.8.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8e3e04debbb59698c15bacbb6d93584a8c0ca9cc3213cb423d31f760d8843ce5"
+>>>>>>> template/main
 dependencies = [
  "adler2",
 ]
@@ -2876,7 +3137,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd"
 dependencies = [
  "libc",
+<<<<<<< HEAD
  "wasi 0.11.0+wasi-snapshot-preview1",
+=======
+ "wasi",
+>>>>>>> template/main
  "windows-sys 0.52.0",
 ]
 
@@ -3021,7 +3286,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
 dependencies = [
  "autocfg",
+<<<<<<< HEAD
  "libm",
+=======
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -3035,9 +3303,15 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
+<<<<<<< HEAD
 version = "1.21.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d"
+=======
+version = "1.21.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d75b0bedcc4fe52caa0e03d9f1151a323e4aa5e2d78ba3580400cd3c9e2bc4bc"
+>>>>>>> template/main
 
 [[package]]
 name = "opaque-debug"
@@ -3113,6 +3387,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "parity-scale-codec"
 version = "3.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3141,6 +3416,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "parking_lot"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3193,9 +3470,15 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "pest"
+<<<<<<< HEAD
 version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "198db74531d58c70a361c42201efde7e2591e976d518caf7662a47dc5720e7b6"
+=======
+version = "2.7.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8b7cafe60d6cf8e62e1b9b2ea516a089c008945bb5a275416789e7db0bc199dc"
+>>>>>>> template/main
 dependencies = [
  "memchr",
  "thiserror 2.0.12",
@@ -3204,9 +3487,15 @@ dependencies = [
 
 [[package]]
 name = "pest_derive"
+<<<<<<< HEAD
 version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d725d9cfd79e87dccc9341a2ef39d1b6f6353d68c4b33c177febbe1a402c97c5"
+=======
+version = "2.7.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "816518421cfc6887a0d62bf441b6ffb4536fcc926395a69e1a85852d4363f57e"
+>>>>>>> template/main
 dependencies = [
  "pest",
  "pest_generator",
@@ -3214,9 +3503,15 @@ dependencies = [
 
 [[package]]
 name = "pest_generator"
+<<<<<<< HEAD
 version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db7d01726be8ab66ab32f9df467ae8b1148906685bbe75c82d1e65d7f5b3f841"
+=======
+version = "2.7.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7d1396fd3a870fc7838768d171b4616d5c91f6cc25e377b673d714567d99377b"
+>>>>>>> template/main
 dependencies = [
  "pest",
  "pest_meta",
@@ -3227,9 +3522,15 @@ dependencies = [
 
 [[package]]
 name = "pest_meta"
+<<<<<<< HEAD
 version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f9f832470494906d1fca5329f8ab5791cc60beb230c74815dff541cbd2b5ca0"
+=======
+version = "2.7.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e1e58089ea25d717bfd31fb534e4f3afcc2cc569c70de3e239778991ea3b7dea"
+>>>>>>> template/main
 dependencies = [
  "once_cell",
  "pest",
@@ -3305,7 +3606,11 @@ version = "0.2.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "85eae3c4ed2f50dcfe72643da4befc30deadb458a9b590d720cde2f2b1e97da9"
 dependencies = [
+<<<<<<< HEAD
  "zerocopy 0.8.24",
+=======
+ "zerocopy 0.8.23",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -3318,6 +3623,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "primitive-types"
 version = "0.12.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3362,6 +3668,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "proc-macro-error-attr2"
 version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3397,6 +3705,12 @@ name = "program-template"
 version = "0.1.0"
 dependencies = [
  "clap",
+<<<<<<< HEAD
+=======
+ "cosmwasm-std 2.2.2",
+ "cw-denom",
+ "cw-utils",
+>>>>>>> template/main
  "deployer-lib",
  "serde_json",
  "tokio",
@@ -3407,8 +3721,11 @@ dependencies = [
  "valence-authorization",
  "valence-authorization-utils",
  "valence-base-account",
+<<<<<<< HEAD
  "valence-drop-liquid-staker",
  "valence-encoder-broker",
+=======
+>>>>>>> template/main
  "valence-forwarder-library",
  "valence-generic-ibc-transfer-library",
  "valence-ibc-utils",
@@ -3416,7 +3733,10 @@ dependencies = [
  "valence-library-utils",
  "valence-macros",
  "valence-neutron-ibc-transfer-library",
+<<<<<<< HEAD
  "valence-neutron-ic-querier",
+=======
+>>>>>>> template/main
  "valence-osmosis-cl-lper",
  "valence-osmosis-cl-withdrawer",
  "valence-osmosis-gamm-lper",
@@ -3428,6 +3748,7 @@ dependencies = [
  "valence-program-registry",
  "valence-reverse-splitter-library",
  "valence-splitter-library",
+<<<<<<< HEAD
  "valence-storage-account",
 ]
 
@@ -3449,6 +3770,8 @@ dependencies = [
  "rusty-fork",
  "tempfile",
  "unarray",
+=======
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -3596,12 +3919,15 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "quote"
 version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3611,6 +3937,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "r-efi"
 version = "5.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3623,6 +3950,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dc33ff2d4973d518d823d61aa239014831e521c75da58e3df4840d3f47749d09"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "rand"
 version = "0.5.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3642,11 +3971,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
 dependencies = [
  "libc",
+<<<<<<< HEAD
  "rand_chacha 0.3.1",
+=======
+ "rand_chacha",
+>>>>>>> template/main
  "rand_core 0.6.4",
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rand"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3658,6 +3992,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "rand_chacha"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3668,6 +4004,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rand_chacha"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3678,6 +4015,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "rand_core"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3704,6 +4043,7 @@ version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
+<<<<<<< HEAD
  "getrandom 0.2.15",
 ]
 
@@ -3723,6 +4063,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d25bf25ec5ae4a3f1b92f929810509a2f53d7dca2f50b794ff57e3face536c8f"
 dependencies = [
  "rand_core 0.6.4",
+=======
+ "getrandom",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -3747,9 +4090,15 @@ dependencies = [
 
 [[package]]
 name = "redox_syscall"
+<<<<<<< HEAD
 version = "0.5.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2f103c6d277498fbceb16e84d317e2a400f160f46904d5f5410848c829511a3"
+=======
+version = "0.5.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0b8c0c260b63a8219631167be35e6a988e9554dbd323f8bd08439c8ed1302bd1"
+>>>>>>> template/main
 dependencies = [
  "bitflags 2.9.0",
 ]
@@ -3812,6 +4161,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rlp"
 version = "0.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3822,6 +4172,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "rmp"
 version = "0.8.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3856,6 +4208,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "ruint"
 version = "1.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3889,6 +4242,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48fd7bd8a6377e15ad9d42a8ec25371b94ddc67abe7c8b9127bec79bebaaae18"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "rust-ini"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3929,6 +4284,7 @@ checksum = "3e75f6a532d0fd9f7f13144f392b6ad56a32696bfcd9c78f797f16bbb6f072d6"
 
 [[package]]
 name = "rustc_version"
+<<<<<<< HEAD
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f0dfe2087c51c460008730de8b57e6a320782fbfb312e1f4d520e6c6fae155ee"
@@ -3938,10 +4294,13 @@ dependencies = [
 
 [[package]]
 name = "rustc_version"
+=======
+>>>>>>> template/main
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cfcb3a22ef46e85b45de6ee7e79d063319ebb6594faafcf1c225ea92ab6e9b92"
 dependencies = [
+<<<<<<< HEAD
  "semver 1.0.26",
 ]
 
@@ -3956,6 +4315,9 @@ dependencies = [
  "libc",
  "linux-raw-sys",
  "windows-sys 0.59.0",
+=======
+ "semver",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -3965,6 +4327,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eded382c5f5f786b989652c49544c4877d9f015cc22e145a5ea8ea66c2921cd2"
 
 [[package]]
+<<<<<<< HEAD
 name = "rusty-fork"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3977,6 +4340,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "ryu"
 version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4046,6 +4411,7 @@ dependencies = [
 
 [[package]]
 name = "semver"
+<<<<<<< HEAD
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f301af10236f6df4160f7c3f04eec6dbc70ace82d23326abad5edee88801c6b6"
@@ -4055,11 +4421,14 @@ dependencies = [
 
 [[package]]
 name = "semver"
+=======
+>>>>>>> template/main
 version = "1.0.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "56e6fa9c48d24d85fb3de5ad847117517440f6beceb7798af16b4a87d616b8d0"
 
 [[package]]
+<<<<<<< HEAD
 name = "semver-parser"
 version = "0.10.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4069,6 +4438,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "serde"
 version = "1.0.219"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4212,6 +4583,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "sha3-asm"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4222,6 +4594,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "sharded-slab"
 version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4266,6 +4640,7 @@ dependencies = [
 
 [[package]]
 name = "smallvec"
+<<<<<<< HEAD
 version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8917285742e9f3e1683f0a9c4e6b57960b7314d0b08d30d1ecd426713ee2eee9"
@@ -4275,6 +4650,17 @@ name = "socket2"
 version = "0.5.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4f5fd57c80058a56cf5c777ab8a126398ece8e442983605d280a44ce79d0edef"
+=======
+version = "1.14.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7fcf8323ef1faaee30a44a340193b1ac6814fd9b7b4e88e9d4519a3e4abe1cfd"
+
+[[package]]
+name = "socket2"
+version = "0.5.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c970269d99b64e60ec3bd6ad27270092a5394c4e309314b18ae3fe575695fbe8"
+>>>>>>> template/main
 dependencies = [
  "libc",
  "windows-sys 0.52.0",
@@ -4301,12 +4687,15 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "stable_deref_trait"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "static_assertions"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4412,6 +4801,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "syn-solidity"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4424,12 +4814,15 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "sync_wrapper"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2047c6ded9c721764247e62cd3b03c09ffc529b2ba5b10ec482ae507a4a70160"
 
 [[package]]
+<<<<<<< HEAD
 name = "synstructure"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4460,6 +4853,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "tendermint"
 version = "0.35.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4593,9 +4988,15 @@ dependencies = [
 
 [[package]]
 name = "time"
+<<<<<<< HEAD
 version = "0.3.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a7619e19bc266e0f9c5e6686659d394bc57973859340060a69221e57dbc0c40"
+=======
+version = "0.3.40"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9d9c75b47bdff86fa3334a3db91356b8d7d86a9b839dab7d0bdc5c3d3a077618"
+>>>>>>> template/main
 dependencies = [
  "deranged",
  "num-conv",
@@ -4613,9 +5014,15 @@ checksum = "c9e9a38711f559d9e3ce1cdb06dd7c5b8ea546bc90052da6d06bb76da74bb07c"
 
 [[package]]
 name = "time-macros"
+<<<<<<< HEAD
 version = "0.2.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3526739392ec93fd8b359c8e98514cb3e8e021beb4e5f597b00a0221f8ed8a49"
+=======
+version = "0.2.21"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "29aa485584182073ed57fd5004aa09c371f021325014694e432313345865fd04"
+>>>>>>> template/main
 dependencies = [
  "num-conv",
  "time-core",
@@ -4640,6 +5047,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "tinystr"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4650,6 +5058,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "tinyvec"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4666,9 +5076,15 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
 name = "tokio"
+<<<<<<< HEAD
 version = "1.44.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6b88822cbe49de4185e3a4cbf8321dd487cf5fe0c5c65695fef6346371e9c48"
+=======
+version = "1.44.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f382da615b842244d4b8738c82ed1275e6c5dd90c459a30941cd07080b06c91a"
+>>>>>>> template/main
 dependencies = [
  "backtrace",
  "bytes",
@@ -4754,7 +5170,11 @@ version = "0.22.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "17b4795ff5edd201c7cd6dca065ae59972ce77d1b80fa0a84d94950ece7d1474"
 dependencies = [
+<<<<<<< HEAD
  "indexmap 2.9.0",
+=======
+ "indexmap 2.8.0",
+>>>>>>> template/main
  "serde",
  "serde_spanned",
  "toml_datetime",
@@ -4914,6 +5334,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "uint"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4932,6 +5353,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eaea85b334db583fe3274d12b4cd1880032beab409c0d774be044d4480ab9a94"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "unicode-ident"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4959,6 +5382,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853"
 
 [[package]]
+<<<<<<< HEAD
 name = "url"
 version = "2.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4982,6 +5406,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be"
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "utf8parse"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4989,13 +5415,22 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "valence-account-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-utils 2.0.0",
+=======
+ "cw-utils",
+>>>>>>> template/main
  "serde",
  "serde_json",
  "thiserror 1.0.69",
@@ -5004,8 +5439,13 @@ dependencies = [
 
 [[package]]
 name = "valence-astroport-lper"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5018,8 +5458,13 @@ dependencies = [
 
 [[package]]
 name = "valence-astroport-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5028,8 +5473,13 @@ dependencies = [
 
 [[package]]
 name = "valence-astroport-withdrawer"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5043,50 +5493,87 @@ dependencies = [
 
 [[package]]
 name = "valence-authorization"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmos-sdk-proto 0.20.0",
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
  "cw2 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+ "cw2",
+>>>>>>> template/main
  "neutron-sdk",
  "serde_json",
  "thiserror 1.0.69",
  "valence-authorization-utils",
+<<<<<<< HEAD
  "valence-encoder-broker",
  "valence-encoder-utils",
  "valence-gmp-utils",
+=======
+ "valence-polytone-utils",
+>>>>>>> template/main
  "valence-processor-utils",
 ]
 
 [[package]]
 name = "valence-authorization-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-utils 2.0.0",
  "serde_json",
  "valence-gmp-utils",
  "valence-library-utils",
+=======
+ "cw-utils",
+ "serde_json",
+ "valence-library-utils",
+ "valence-polytone-utils",
+>>>>>>> template/main
 ]
 
 [[package]]
 name = "valence-base-account"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw2 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw2",
+>>>>>>> template/main
  "schemars",
  "serde",
  "thiserror 1.0.69",
@@ -5094,6 +5581,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-drop-liquid-staker"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5160,12 +5648,22 @@ dependencies = [
 name = "valence-forwarder-library"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+name = "valence-forwarder-library"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "getset",
  "schemars",
  "serde",
@@ -5177,14 +5675,24 @@ dependencies = [
 
 [[package]]
 name = "valence-generic-ibc-transfer-library"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "getset",
  "schemars",
  "serde",
@@ -5196,6 +5704,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-gmp-utils"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5208,26 +5717,45 @@ dependencies = [
 name = "valence-ibc-utils"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+name = "valence-ibc-utils"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmos-sdk-proto 0.20.0",
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-denom",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
+=======
+ "cw-storage-plus",
+>>>>>>> template/main
  "neutron-sdk",
  "serde",
 ]
 
 [[package]]
 name = "valence-library-base"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw2 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw2",
+>>>>>>> template/main
  "schemars",
  "serde",
  "thiserror 1.0.69",
@@ -5237,15 +5765,25 @@ dependencies = [
 
 [[package]]
 name = "valence-library-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-denom",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "serde",
  "serde_json",
  "thiserror 1.0.69",
@@ -5254,6 +5792,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-liquid-staking-utils"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5266,6 +5805,11 @@ dependencies = [
 name = "valence-macros"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+name = "valence-macros"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5275,6 +5819,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-middleware-broker"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5311,12 +5856,22 @@ dependencies = [
 name = "valence-neutron-ibc-transfer-library"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+name = "valence-neutron-ibc-transfer-library"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "getset",
  "neutron-sdk",
  "schemars",
@@ -5330,6 +5885,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-neutron-ic-querier"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5353,12 +5909,22 @@ dependencies = [
 name = "valence-osmosis-cl-lper"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+name = "valence-osmosis-cl-lper"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "osmosis-std",
  "osmosis-std-derive",
  "schemars",
@@ -5373,14 +5939,24 @@ dependencies = [
 
 [[package]]
 name = "valence-osmosis-cl-withdrawer"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "osmosis-std",
  "osmosis-std-derive",
  "schemars",
@@ -5395,8 +5971,13 @@ dependencies = [
 
 [[package]]
 name = "valence-osmosis-gamm-lper"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5411,8 +5992,13 @@ dependencies = [
 
 [[package]]
 name = "valence-osmosis-gamm-withdrawer"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5427,8 +6013,13 @@ dependencies = [
 
 [[package]]
 name = "valence-osmosis-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5438,6 +6029,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-processor"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5451,11 +6043,36 @@ dependencies = [
  "thiserror 1.0.69",
  "valence-authorization-utils",
  "valence-gmp-utils",
+=======
+name = "valence-polytone-utils"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+dependencies = [
+ "cosmwasm-schema 2.2.2",
+ "cosmwasm-std 2.2.2",
+]
+
+[[package]]
+name = "valence-processor"
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+dependencies = [
+ "cosmwasm-schema 2.2.2",
+ "cosmwasm-std 2.2.2",
+ "cw-storage-plus",
+ "cw-utils",
+ "cw2",
+ "serde_json",
+ "thiserror 1.0.69",
+ "valence-authorization-utils",
+ "valence-polytone-utils",
+>>>>>>> template/main
  "valence-processor-utils",
 ]
 
 [[package]]
 name = "valence-processor-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
 dependencies = [
@@ -5467,12 +6084,30 @@ dependencies = [
  "serde_json",
  "valence-authorization-utils",
  "valence-gmp-utils",
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+dependencies = [
+ "cosmwasm-schema 2.2.2",
+ "cosmwasm-std 2.2.2",
+ "cw-storage-plus",
+ "cw-utils",
+ "serde",
+ "serde_json",
+ "valence-authorization-utils",
+ "valence-polytone-utils",
+>>>>>>> template/main
 ]
 
 [[package]]
 name = "valence-program-manager"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "aho-corasick",
  "anyhow",
@@ -5486,7 +6121,11 @@ dependencies = [
  "cw-ownable",
  "dashmap",
  "dhat",
+<<<<<<< HEAD
  "env_logger 0.11.8",
+=======
+ "env_logger 0.11.7",
+>>>>>>> template/main
  "futures",
  "glob",
  "hex",
@@ -5508,8 +6147,11 @@ dependencies = [
  "valence-astroport-withdrawer",
  "valence-authorization",
  "valence-authorization-utils",
+<<<<<<< HEAD
  "valence-drop-liquid-staker",
  "valence-drop-liquid-unstaker",
+=======
+>>>>>>> template/main
  "valence-forwarder-library",
  "valence-generic-ibc-transfer-library",
  "valence-library-base",
@@ -5530,14 +6172,24 @@ dependencies = [
 
 [[package]]
 name = "valence-program-registry"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw2 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw2",
+>>>>>>> template/main
  "schemars",
  "serde",
  "thiserror 1.0.69",
@@ -5546,8 +6198,13 @@ dependencies = [
 
 [[package]]
 name = "valence-program-registry-utils"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
@@ -5557,14 +6214,24 @@ dependencies = [
 
 [[package]]
 name = "valence-reverse-splitter-library"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "getset",
  "schemars",
  "serde",
@@ -5576,14 +6243,24 @@ dependencies = [
 
 [[package]]
 name = "valence-splitter-library"
+<<<<<<< HEAD
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
+=======
+version = "0.1.0"
+source = "git+https://github.com/timewave-computer/valence-protocol?tag=v0.1.2#16e604bcdeb54d9b458809487166b8e9c3371299"
+>>>>>>> template/main
 dependencies = [
  "cosmwasm-schema 2.2.2",
  "cosmwasm-std 2.2.2",
  "cw-ownable",
+<<<<<<< HEAD
  "cw-storage-plus 2.0.0",
  "cw-utils 2.0.0",
+=======
+ "cw-storage-plus",
+ "cw-utils",
+>>>>>>> template/main
  "getset",
  "itertools 0.13.0",
  "schemars",
@@ -5595,6 +6272,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "valence-storage-account"
 version = "0.2.0"
 source = "git+https://github.com/timewave-computer/valence-protocol?branch=art3mix%2Fmanager-env-admin#cb45980bdb74ee8a400c1b1085951e7978e1774e"
@@ -5612,6 +6290,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "valuable"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5624,6 +6304,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
 
 [[package]]
+<<<<<<< HEAD
 name = "wait-timeout"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5633,6 +6314,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "want"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5648,6 +6331,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 
 [[package]]
+<<<<<<< HEAD
 name = "wasi"
 version = "0.14.2+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5657,6 +6341,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "wasm-bindgen"
 version = "0.2.100"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5747,6 +6433,7 @@ checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
 
 [[package]]
 name = "windows-core"
+<<<<<<< HEAD
 version = "0.61.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4763c1de310c86d75a878046489e2e5ba02c649d185f21c67d4cf8a56d098980"
@@ -5778,6 +6465,13 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 2.0.100",
+=======
+version = "0.52.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "33ab640c8d7e35bf8ba19b884ba838ceb4fba93a4e8c65a9059d08afcfc683d9"
+dependencies = [
+ "windows-targets",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -5787,6 +6481,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "76840935b766e1b0a05c0066835fb9ec80071d4c09a16f6bd5f7e655e3c14c38"
 
 [[package]]
+<<<<<<< HEAD
 name = "windows-result"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5805,6 +6500,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "windows-sys"
 version = "0.52.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5888,14 +6585,21 @@ checksum = "589f6da84c646204747d1270a2a5661ea66ed1cced2631d546fdfb155959f9ec"
 
 [[package]]
 name = "winnow"
+<<<<<<< HEAD
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "63d3fcd9bba44b03821e7d699eeee959f3126dcc4aa8e4ae18ec617c2a5cea10"
+=======
+version = "0.7.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0e97b544156e9bebe1a0ffbc03484fc1ffe3100cbce3ffb17eac35f7cdd7ab36"
+>>>>>>> template/main
 dependencies = [
  "memchr",
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "wit-bindgen-rt"
 version = "0.39.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5926,6 +6630,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "yaml-rust2"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5938,9 +6644,15 @@ dependencies = [
 
 [[package]]
 name = "yaml-rust2"
+<<<<<<< HEAD
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "818913695e83ece1f8d2a1c52d54484b7b46d0f9c06beeb2649b9da50d9b512d"
+=======
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "232bdb534d65520716bef0bbb205ff8f2db72d807b19c0bc3020853b92a0cd4b"
+>>>>>>> template/main
 dependencies = [
  "arraydeque",
  "encoding_rs",
@@ -5948,6 +6660,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "yoke"
 version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5972,6 +6685,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "zerocopy"
 version = "0.7.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5982,11 +6697,19 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
+<<<<<<< HEAD
 version = "0.8.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2586fea28e186957ef732a5f8b3be2da217d65c5969d4b1e17f973ebbe876879"
 dependencies = [
  "zerocopy-derive 0.8.24",
+=======
+version = "0.8.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd97444d05a4328b90e75e503a34bad781f14e28a823ad3557f0750df1ebcbc6"
+dependencies = [
+ "zerocopy-derive 0.8.23",
+>>>>>>> template/main
 ]
 
 [[package]]
@@ -6002,9 +6725,15 @@ dependencies = [
 
 [[package]]
 name = "zerocopy-derive"
+<<<<<<< HEAD
 version = "0.8.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a996a8f63c5c4448cd959ac1bab0aaa3306ccfd060472f85943ee0750f0169be"
+=======
+version = "0.8.23"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6352c01d0edd5db859a63e2605f4ea3183ddbd15e2c4a9e7d32184df75e4f154"
+>>>>>>> template/main
 dependencies = [
  "proc-macro2",
  "quote",
@@ -6012,6 +6741,7 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "zerofrom"
 version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6033,6 +6763,8 @@ dependencies = [
 ]
 
 [[package]]
+=======
+>>>>>>> template/main
 name = "zeroize"
 version = "1.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6051,6 +6783,7 @@ dependencies = [
  "quote",
  "syn 2.0.100",
 ]
+<<<<<<< HEAD
 
 [[package]]
 name = "zerovec"
@@ -6073,3 +6806,5 @@ dependencies = [
  "quote",
  "syn 2.0.100",
 ]
+=======
+>>>>>>> template/main
