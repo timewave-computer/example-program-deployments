@@ -20,30 +20,37 @@ use valence_library_utils::liquidity_utils::AssetData;
 
 /// Write your program using the program builder
 pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
-    // program params
+
+    // Permissioned addresses
     let owner = params.get("owner");
-    let pool_addr = params.get("pool_addr");
-    let ntrn_on_neutron = params.get("ntrn_on_neutron");
-    let atom_on_neutron = params.get("atom_on_neutron");
-    let atom_on_juno = params.get("atom_on_juno");
     let permissioned_withdrawer = params.get("permissioned_withdrawer");
-    let juno_gaia_ibc_channel_id = params.get("juno_gaia_ibc_channel_id");
-    let gaia_neutron_ibc_channel_id = params.get("gaia_neutron_ibc_channel_id");
+
+    // Denoms
+    let usdc_on_terra = params.get("usdc_on_terra");
+    let usdc_on_neutron = params.get("usdc_on_neutron");
+    let ntrn_on_neutron = params.get("ntrn_on_neutron");
+
+    // Astroport pool
+    let usdc_ntrn_pool_addr = params.get("usdc_ntrn_pool_addr");
+
+    // IBC transfer inputs
+    let terra_noble_ibc_channel_id = params.get("terra_noble_ibc_channel_id");
+    let noble_neutron_ibc_channel_id = params.get("noble_neutron_ibc_channel_id");
 
     // Initialize builder
-    let mut builder = ProgramConfigBuilder::new(owner);
+    let mut builder = ProgramConfigBuilder::new("test program",&owner);
 
     // Domains
     let neutron_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
         "neutron".to_string()
     );
-    let juno_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
-        "juno".to_string()
+    let terra_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
+        "terra2".to_string()
     );
 
     // Accounts
-    let juno_input_account = builder.add_account(
-        AccountInfo::new("juno_input_account".to_string(), &juno_domain, AccountType::default())
+    let terra_input_account = builder.add_account(
+        AccountInfo::new("terra_input_account".to_string(), &terra_domain, AccountType::default())
     );
     let neutron_input_account = builder.add_account(
         AccountInfo::new("neutron_input_account".to_string(), &neutron_domain, AccountType::default())
@@ -55,29 +62,29 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
         AccountInfo::new("withdraw_output_account".to_string(), &neutron_domain, AccountType::default())
     );
 
-    let mut juno_to_neutron_pfm_map:BTreeMap<String, PacketForwardMiddlewareConfig> = BTreeMap::new();
-    juno_to_neutron_pfm_map.insert(atom_on_juno.clone(),PacketForwardMiddlewareConfig {
-        local_to_hop_chain_channel_id: juno_gaia_ibc_channel_id.to_string(),
-        hop_to_destination_chain_channel_id: gaia_neutron_ibc_channel_id.to_string(),
+    let mut terra_to_neutron_pfm_map:BTreeMap<String, PacketForwardMiddlewareConfig> = BTreeMap::new();
+    terra_to_neutron_pfm_map.insert(usdc_on_terra.clone(),PacketForwardMiddlewareConfig {
+        local_to_hop_chain_channel_id: terra_noble_ibc_channel_id.to_string(),
+        hop_to_destination_chain_channel_id: noble_neutron_ibc_channel_id.to_string(),
         hop_chain_receiver_address: "invalid-pfm".to_string(), // necessary so entire transaction is reverted 
      });
 
     // Libraries
-    let juno_ibc_transfer_library = builder.add_library(
+    let terra_ibc_transfer_library = builder.add_library(
         LibraryInfo::new(
-            "juno_ibc_transfer".to_string(),
-            &juno_domain,
+            "terra_ibc_transfer".to_string(),
+            &terra_domain,
             LibraryConfig::ValenceGenericIbcTransferLibrary({
                 valence_generic_ibc_transfer_library::msg::LibraryConfig {
-                    input_addr: juno_input_account.clone(),
+                    input_addr: terra_input_account.clone(),
                     output_addr: neutron_input_account.clone(),
-                    denom: valence_library_utils::denoms::UncheckedDenom::Native(atom_on_juno.to_string()),
+                    denom: valence_library_utils::denoms::UncheckedDenom::Native(usdc_on_terra.to_string()),
                     amount: IbcTransferAmount::FullAmount,
                     remote_chain_info: RemoteChainInfo {
-                        channel_id: juno_gaia_ibc_channel_id.to_string(),
+                        channel_id: terra_noble_ibc_channel_id.to_string(),
                         ibc_transfer_timeout: Some(600u64.into()), // 10 mins
                     },
-                    denom_to_pfm_map:  juno_to_neutron_pfm_map,
+                    denom_to_pfm_map:  terra_to_neutron_pfm_map,
                     memo: "".to_owned(),
                 }
             })
@@ -95,12 +102,12 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
             valence_astroport_lper::msg::LibraryConfig {
                 input_addr: neutron_input_account.clone(),
                 output_addr: liquidity_position_account.clone(),
-                pool_addr: pool_addr.to_string(),
+                pool_addr: usdc_ntrn_pool_addr.to_string(),
                 lp_config:LiquidityProviderConfig {
                    pool_type: pool_type.clone(),
                     asset_data: AssetData {
-                        asset1: ntrn_on_neutron.clone(),
-                        asset2: atom_on_neutron.clone(),
+                        asset1: usdc_on_neutron.clone(),
+                        asset2: ntrn_on_neutron.clone(),
                     },
                     max_spread: None,
                 }
@@ -115,12 +122,12 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
             valence_astroport_withdrawer::msg::LibraryConfig {
                 input_addr: liquidity_position_account.clone(),
                 output_addr: withdraw_output_account.clone(),
-                pool_addr: pool_addr.to_string(),
+                pool_addr: usdc_ntrn_pool_addr.to_string(),
                 withdrawer_config: LiquidityWithdrawerConfig {
                     pool_type: pool_type.clone(),
                     asset_data: AssetData {
-                        asset1: ntrn_on_neutron.clone(),
-                        asset2: atom_on_neutron.clone()
+                        asset1: usdc_on_neutron.clone(),
+                        asset2: ntrn_on_neutron.clone()
                     },
                 },
             }
@@ -128,18 +135,17 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     ));
 
     // links
-    builder.add_link(&juno_ibc_transfer_library, vec![&juno_input_account], vec![&neutron_input_account]);
+    builder.add_link(&terra_ibc_transfer_library, vec![&terra_input_account], vec![&neutron_input_account]);
     builder.add_link(&astroport_lper_library, vec![&neutron_input_account], vec![&liquidity_position_account]);
     builder.add_link(&astroport_withdrawer_library, vec![&liquidity_position_account], vec![&withdraw_output_account]);
-
 
 
     // authorizations
     let ibc_transfer_subroutine = AtomicSubroutineBuilder::new()
     .with_function(AtomicFunctionBuilder::new()
     // NOTE: for crosschain domains, this must be added
-    .with_domain(Domain::External("juno".to_string()))
-    .with_contract_address(juno_ibc_transfer_library.clone())
+    .with_domain(Domain::External("terra".to_string()))
+    .with_contract_address(terra_ibc_transfer_library.clone())
     .with_message_details(MessageDetails {
         message_type: MessageType::CosmwasmExecuteMsg,
         message: Message {
@@ -155,7 +161,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     }).build());
     builder.add_authorization(
         AuthorizationBuilder::new()
-            .with_label("juno_neutron_ibc_transfer")
+            .with_label("transfer_usdc_terra_to_neutron")
             .with_subroutine(
               ibc_transfer_subroutine.build()
             )
