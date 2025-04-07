@@ -26,26 +26,26 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     let permissioned_withdrawer = params.get("permissioned_withdrawer");
 
     // Denoms
-    let usdc_on_terra = params.get("usdc_on_terra");
-    let usdc_on_neutron = params.get("usdc_on_neutron");
+    let atom_on_terra = params.get("atom_on_terra");
+    let atom_on_neutron = params.get("atom_on_neutron");
     let ntrn_on_neutron = params.get("ntrn_on_neutron");
 
     // Astroport pool
-    let usdc_ntrn_pool_addr = params.get("usdc_ntrn_pool_addr");
+    let ntrn_atom_pool_addr = params.get("ntrn_atom_pool_addr");
 
     // IBC transfer inputs
-    let terra_noble_ibc_channel_id = params.get("terra_noble_ibc_channel_id");
-    let noble_neutron_ibc_channel_id = params.get("noble_neutron_ibc_channel_id");
+    let terra_cosmoshub_ibc_channel_id = params.get("terra_cosmoshub_ibc_channel_id");
+    let cosmoshub_neutron_ibc_channel_id = params.get("cosmoshub_neutron_ibc_channel_id");
 
     // Initialize builder
-    let mut builder = ProgramConfigBuilder::new("test program",&owner);
+    let mut builder = ProgramConfigBuilder::new(owner);
 
     // Domains
     let neutron_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
         "neutron".to_string()
     );
     let terra_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
-        "terra2".to_string()
+        "terra".to_string()
     );
 
     // Accounts
@@ -63,9 +63,9 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     );
 
     let mut terra_to_neutron_pfm_map:BTreeMap<String, PacketForwardMiddlewareConfig> = BTreeMap::new();
-    terra_to_neutron_pfm_map.insert(usdc_on_terra.clone(),PacketForwardMiddlewareConfig {
-        local_to_hop_chain_channel_id: terra_noble_ibc_channel_id.to_string(),
-        hop_to_destination_chain_channel_id: noble_neutron_ibc_channel_id.to_string(),
+    terra_to_neutron_pfm_map.insert(atom_on_terra.clone(),PacketForwardMiddlewareConfig {
+        local_to_hop_chain_channel_id: terra_cosmoshub_ibc_channel_id.to_string(),
+        hop_to_destination_chain_channel_id: cosmoshub_neutron_ibc_channel_id.to_string(),
         hop_chain_receiver_address: "invalid-pfm".to_string(), // necessary so entire transaction is reverted 
      });
 
@@ -78,10 +78,10 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
                 valence_generic_ibc_transfer_library::msg::LibraryConfig {
                     input_addr: terra_input_account.clone(),
                     output_addr: neutron_input_account.clone(),
-                    denom: valence_library_utils::denoms::UncheckedDenom::Native(usdc_on_terra.to_string()),
+                    denom: valence_library_utils::denoms::UncheckedDenom::Native(atom_on_terra.to_string()),
                     amount: IbcTransferAmount::FullAmount,
                     remote_chain_info: RemoteChainInfo {
-                        channel_id: terra_noble_ibc_channel_id.to_string(),
+                        channel_id: terra_cosmoshub_ibc_channel_id.to_string(),
                         ibc_transfer_timeout: Some(600u64.into()), // 10 mins
                     },
                     denom_to_pfm_map:  terra_to_neutron_pfm_map,
@@ -102,11 +102,11 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
             valence_astroport_lper::msg::LibraryConfig {
                 input_addr: neutron_input_account.clone(),
                 output_addr: liquidity_position_account.clone(),
-                pool_addr: usdc_ntrn_pool_addr.to_string(),
+                pool_addr: ntrn_atom_pool_addr.to_string(),
                 lp_config:LiquidityProviderConfig {
                    pool_type: pool_type.clone(),
                     asset_data: AssetData {
-                        asset1: usdc_on_neutron.clone(),
+                        asset1: atom_on_neutron.clone(),
                         asset2: ntrn_on_neutron.clone(),
                     },
                     max_spread: None,
@@ -122,11 +122,11 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
             valence_astroport_withdrawer::msg::LibraryConfig {
                 input_addr: liquidity_position_account.clone(),
                 output_addr: withdraw_output_account.clone(),
-                pool_addr: usdc_ntrn_pool_addr.to_string(),
+                pool_addr: ntrn_atom_pool_addr.to_string(),
                 withdrawer_config: LiquidityWithdrawerConfig {
                     pool_type: pool_type.clone(),
                     asset_data: AssetData {
-                        asset1: usdc_on_neutron.clone(),
+                        asset1: atom_on_neutron.clone(),
                         asset2: ntrn_on_neutron.clone()
                     },
                 },
