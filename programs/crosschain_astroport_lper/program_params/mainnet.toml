@@ -1,0 +1,8 @@
+owner="neutron1tqmf4x0xewrjgdalp59aw6lvzz3k5tx7pk59y6"
+permissioned_withdrawer="neutron1tqmf4x0xewrjgdalp59aw6lvzz3k5tx7pk59y6"
+atom_on_terra="ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+atom_on_neutron="ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+ntrn_on_neutron="untrn"
+ntrn_atom_pool_addr="neutron145z3nj7yqft2vpugr5a5p7jsnagvms90tvtej45g4s0xkqalhy7sj20vgz"
+terra_cosmoshub_ibc_channel_id="channel-0"
+cosmoshub_neutron_ibc_channel_id="channel-569"
