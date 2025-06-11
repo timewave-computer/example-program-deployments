@@ -1,6 +1,7 @@
 use valence_authorization_utils::{
     authorization_message::{Message, MessageDetails, MessageType, ParamRestriction},
     builders::{AtomicFunctionBuilder, AtomicSubroutineBuilder, AuthorizationBuilder},
+    domain::Domain,
 };
 use valence_library_utils::denoms::UncheckedDenom;
 use valence_program_manager::{
@@ -9,7 +10,6 @@ use valence_program_manager::{
     program_config::ProgramConfig,
     program_config_builder::ProgramConfigBuilder,
 };
-use valence_splitter_library::msg::{UncheckedSplitAmount, UncheckedSplitConfig};
 use valence_forwarder_library::msg::UncheckedForwardingConfig;
 use cosmwasm_std::Uint128;
 
@@ -19,7 +19,6 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     let owner = params.get("owner");
 
     // Domains
-    let neutron_domain = valence_program_manager::domain::Domain::CosmosCosmwasm("neutron".to_string());
     let osmosis_domain = valence_program_manager::domain::Domain::CosmosCosmwasm("osmosis".to_string());
 
     // Write your program
@@ -81,6 +80,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     let action_label_a_to_b = "A_to_B";
     let function_a_to_b = AtomicFunctionBuilder::new()
         .with_contract_address(library_forwarder_a_to_b.clone())
+        .with_domain(Domain::External("osmosis".to_string()))
         .with_message_details(MessageDetails {
             message_type: MessageType::CosmwasmExecuteMsg,
             message: Message {
@@ -107,6 +107,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     let action_label_b_to_a = "B_to_A";
     let function_b_to_a = AtomicFunctionBuilder::new()
         .with_contract_address(library_forwarder_b_to_a.clone())
+        .with_domain(Domain::External("osmosis".to_string()))
         .with_message_details(MessageDetails {
             message_type: MessageType::CosmwasmExecuteMsg,
             message: Message {
