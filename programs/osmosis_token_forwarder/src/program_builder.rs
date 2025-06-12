@@ -48,7 +48,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     };
 
     let library_forwarder_a_to_b = builder.add_library(LibraryInfo::new(
-        "forwader_A_to_B".to_string(),
+        "forwarder_A_to_B".to_string(),
         &osmosis_domain,
         LibraryConfig::ValenceForwarderLibrary(library_forwarder_a_to_b_config.clone()),
     ));
