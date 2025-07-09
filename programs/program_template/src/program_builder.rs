@@ -22,7 +22,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     // Write your program
     let swap_amount: u128 = 1_000_000_000;
 
-    let mut builder = ProgramConfigBuilder::new(owner);
+    let mut builder = ProgramConfigBuilder::new("test_program", &owner);
 
     let account_1 = builder.add_account(AccountInfo::new(
         "test_1".to_string(),

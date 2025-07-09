@@ -1,5 +1,5 @@
 [package]
-name       = "program-template"
+name       = "osmosis_token_forwarder"
 authors    = ["Timewave Labs"]
 edition    = "2021"
 license    = "Apache-2.0"
@@ -12,6 +12,7 @@ valence-program-manager = { workspace = true }
 serde_json              = { workspace = true }
 clap                    = { workspace = true }
 tokio                   = { workspace = true }
+cosmwasm-std            = { workspace = true }
 
 # Libraries
 valence-authorization                = { workspace = true }

@@ -24,7 +24,7 @@ pub fn program_builder(params: deployer_lib::ProgramParams) -> ProgramConfig {
     let permissioned_withdrawer = params.get("permissioned_withdrawer");
 
     // Initialize the program builder
-    let mut builder = ProgramConfigBuilder::new(owner);
+    let mut builder = ProgramConfigBuilder::new("astroport_lper", &owner);
 
     // Domains
     let neutron_domain = valence_program_manager::domain::Domain::CosmosCosmwasm(
