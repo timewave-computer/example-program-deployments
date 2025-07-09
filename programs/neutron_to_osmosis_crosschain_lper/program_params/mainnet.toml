@@ -1,0 +1,33 @@
+# Program owner
+owner = "neutron1qxatg2nkmsf26cymcg2saeh9l2cqp0s2xms7xd"
+
+# IBC Configuration - Neutron to Osmosis via Stride (stATOM)
+neutron_stride_channel = "channel-8"      # Neutron -> Stride channel
+stride_osmosis_channel = "channel-5"       # Stride -> Osmosis channel
+osmosis_stride_channel = "channel-326"       # Osmosis -> Stride channel  
+stride_neutron_channel = "channel-123"   # Stride -> Neutron channel
+
+# IBC Configuration - Neutron to Osmosis via Cosmos Hub (ATOM)
+neutron_cosmos_channel = "channel-1"       # Neutron -> Cosmos Hub channel
+cosmos_osmosis_channel = "channel-141"       # Cosmos Hub -> Osmosis channel
+osmosis_cosmos_channel = "channel-0"       # Osmosis -> Cosmos Hub channel
+cosmos_neutron_channel = "channel-569"       # Cosmos Hub -> Neutron channel
+
+ibc_timeout_seconds = 3600
+
+# Osmosis CL Pool Configuration
+pool_id = 1283 # Target Concentrated Liquidity pool ID
+lower_tick = -100000  # Lower tick for liquidity position
+upper_tick = 100000   # Upper tick for liquidity position
+
+# Token Configuration - Neutron
+neutron_atom_denom = "ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9"
+neutron_statom_denom = "ibc/B7864B03E1B9FD4F049243E92ABD691586F682137037A9F3FCA5222815620B3C"
+
+# Token Configuration - Osmosis
+osmosis_atom_denom = "ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2"
+osmosis_statom_denom = "ibc/C140AFD542AE77BD7DCC83F13FDD8C5E5BB8C4929785E6EC2F4C636F98F17901"
+
+# Maximum amounts for operations
+max_ibc_transfer_amount = "1000000000"  # 1000 ATOM in micro units
+max_forward_amount = "100000000"       # Maximum forward amount
